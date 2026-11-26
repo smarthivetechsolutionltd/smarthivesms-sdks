@@ -1,0 +1,64 @@
+[build-system]
+requires = ["hatchling>=1.24.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "smarthivesms"
+version = "1.0.0"
+description = "Official Python SDK for SmarthiveSMS — Nigerian & African SMS (TRX DND-bypass & MKT), WhatsApp OTP, Voice OTP, and Transactional Email API."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.9"
+authors = [
+  { name = "Smarthive Tech Solution", email = "support@smarthivesms.com" }
+]
+keywords = [
+  "smarthivesms",
+  "sms",
+  "nigeria-sms",
+  "bulk-sms",
+  "dnd-bypass",
+  "otp",
+  "whatsapp-otp",
+  "voice-otp",
+  "transactional-email",
+  "cpaas",
+  "africa"
+]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Communications",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+  "Typing :: Typed"
+]
+dependencies = [
+  "httpx>=0.25.0"
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0.0",
+  "pytest-asyncio>=0.23.0"
+]
+
+[project.urls]
+Homepage = "https://smarthivesms.com"
+Documentation = "https://docs.smarthivesms.com"
+Repository = "https://github.com/smarthivetechsolutionltd/smarthivesms-sdks"
+Issues = "https://github.com/smarthivetechsolutionltd/smarthivesms-sdks/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/smarthivesms"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]

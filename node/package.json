@@ -1,0 +1,60 @@
+{
+  "name": "smarthivesms",
+  "version": "1.0.0",
+  "description": "Official Node.js and TypeScript SDK for SmarthiveSMS — Nigerian & African SMS (TRX DND-bypass & MKT), WhatsApp OTP, Voice OTP, and Transactional Email API.",
+  "keywords": [
+    "smarthivesms",
+    "sms",
+    "nigeria-sms",
+    "bulk-sms",
+    "dnd-bypass",
+    "otp",
+    "whatsapp-otp",
+    "voice-otp",
+    "transactional-email",
+    "cpaas",
+    "africa",
+    "termii-alternative",
+    "typescript"
+  ],
+  "homepage": "https://smarthivesms.com",
+  "bugs": {
+    "url": "https://github.com/smarthivetechsolutionltd/smarthivesms-sdks/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/smarthivetechsolutionltd/smarthivesms-sdks.git",
+    "directory": "node"
+  },
+  "license": "MIT",
+  "author": "Smarthive Tech Solution <support@smarthivesms.com>",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test test/*.test.mjs",
+    "prepublishOnly": "npm run typecheck && npm run build && npm test"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0",
+    "typescript": "^5.8.2"
+  }
+}
