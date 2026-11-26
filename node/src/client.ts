@@ -25,7 +25,7 @@ import type {
 const DEFAULT_BASE_URL = "https://api.smarthivesms.com";
 const DEFAULT_TIMEOUT_MS = 30_000;
 const DEFAULT_MAX_RETRIES = 2;
-const SDK_USER_AGENT = "smarthivesms-node/1.0.0";
+const SDK_USER_AGENT = "smarthivesms-node/1.0.1";
 
 function getEnv(name: string): string | undefined {
   const g = globalThis as { process?: { env?: Record<string, string | undefined> } };

@@ -20,7 +20,7 @@ SmsRoute = Literal["MKT", "TRX", "INTL"]
 DEFAULT_BASE_URL = "https://api.smarthivesms.com"
 DEFAULT_TIMEOUT = 30.0
 DEFAULT_MAX_RETRIES = 2
-SDK_USER_AGENT = "smarthivesms-python/1.0.0"
+SDK_USER_AGENT = "smarthivesms-python/1.0.1"
 
 
 def _extract_error_message(payload: Any, fallback: str) -> str:
